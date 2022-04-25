@@ -1,4 +1,4 @@
-package com.hcl.hystrix.application;
+package com.xyz.hystrix.application;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -1,4 +1,4 @@
-package com.hcl.hystrix.application.controller;
+package com.xyz.hystrix.application.controller;
 
 import org.apache.commons.lang.math.RandomUtils;
 import org.springframework.web.bind.annotation.GetMapping;
