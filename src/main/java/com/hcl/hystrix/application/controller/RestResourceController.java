@@ -1,4 +1,4 @@
-package myorg.springboot.cloud.controller;
+package com.hcl.hystrix.application.controller;
 
 import org.apache.commons.lang.math.RandomUtils;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,6 +18,15 @@ public class RestResourceController {
 			throw new RuntimeException("Failed!");
 		}
 		return "Hello World";
+	}
+	
+	@HystrixCommand(fallbackMethod = "fallBackHello", commandKey = "helloYoutube", groupKey = "helloYT")
+	@GetMapping("/helloYT")
+	public String helloYT() {
+		if (RandomUtils.nextBoolean()) {
+			throw new RuntimeException("Failed!");
+		}
+		return "Hello World Youtube";
 	}
 
 	public String fallBackHello() {

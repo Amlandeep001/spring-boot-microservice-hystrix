@@ -1,4 +1,4 @@
-package myorg.springboot.cloud;
+package com.hcl.hystrix.application;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
