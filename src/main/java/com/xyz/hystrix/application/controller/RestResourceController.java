@@ -9,27 +9,33 @@ import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 
 @RestController
 @RequestMapping("/rest")
-public class RestResourceController {
+public class RestResourceController
+{
 
 	@HystrixCommand(fallbackMethod = "fallBackHello", commandKey = "hello", groupKey = "hello")
 	@GetMapping("/hello")
-	public String hello() {
-		if (RandomUtils.nextBoolean()) {
+	public String hello()
+	{
+		if(RandomUtils.nextBoolean())
+		{
 			throw new RuntimeException("Failed!");
 		}
 		return "Hello World";
 	}
-	
+
 	@HystrixCommand(fallbackMethod = "fallBackHello", commandKey = "helloYoutube", groupKey = "helloYT")
 	@GetMapping("/helloYT")
-	public String helloYT() {
-		if (RandomUtils.nextBoolean()) {
+	public String helloYT()
+	{
+		if(RandomUtils.nextBoolean())
+		{
 			throw new RuntimeException("Failed!");
 		}
 		return "Hello World Youtube";
 	}
 
-	public String fallBackHello() {
+	public String fallBackHello()
+	{
 		return "Fall Back Hello initiated";
 	}
 }
