@@ -11,7 +11,6 @@ import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 @RequestMapping("/rest")
 public class RestResourceController
 {
-
 	@HystrixCommand(fallbackMethod = "fallBackHello", commandKey = "hello", groupKey = "hello")
 	@GetMapping("/hello")
 	public String hello()
