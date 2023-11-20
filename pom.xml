@@ -11,7 +11,7 @@
 	</parent>
 	<groupId>myorg.springboot.cloud</groupId>
 	<artifactId>hystrix-application</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<name>HystrixApplication</name>
 	<description>Demo project for Spring Boot Hystrix</description>
 	<properties>
